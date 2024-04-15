@@ -58,8 +58,8 @@ $('#get-safety-ratings').click(getSafetyRatings);
             async: true,
             data: {
                 Year: yearSearch,
-                Model: modelSearch,
-                Make: makeSearch
+                Make: makeSearch,
+                Model: modelSearch
             },
             dataType: 'json',
             success: function(data) {
