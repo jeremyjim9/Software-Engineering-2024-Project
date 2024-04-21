@@ -49,7 +49,7 @@ $('#get-safety-ratings').click(getSafetyRatings);
         //    return;
         //}
         console.log(makeSearch, modelSearch, yearSearch);
-
+        
         //var sendInfo = {Year: yearSearch, city: modelSearch, sort: makeSearch}
         // Make an AJAX request
         $.ajax({
@@ -57,13 +57,15 @@ $('#get-safety-ratings').click(getSafetyRatings);
             url: 'https://js6i22vcp4.execute-api.us-east-1.amazonaws.com/FirstStage/GETYEARMAKEMODEL',
             async: true,
             data: {
-                Year: yearSearch,
+                Year: yearSearch, 
                 Make: makeSearch,
                 Model: modelSearch
             },
             dataType: 'json',
             success: function(data) {
                 console.log(data);
+
+                
 
                 // Clear the both divs before adding events
                 $('#safety-rating-container').empty();
