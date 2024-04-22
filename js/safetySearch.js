@@ -100,7 +100,12 @@ $('#get-safety-ratings').click(getSafetyRatings);
                     const vehicleDescription = safetyRating.VehicleDescription;
                     const complaintsCount = safetyRating.ComplaintsCount;
                     const vehiclePicture = safetyRating.VehiclePicture;
-                    const vehicleVideo = safetyRating.VehicleVideo;
+                    const frontCrashPicture = safetyRating.FrontCrashPicture;
+                    const sideCrashPicture = safetyRating.SideCrashPicture;
+                    const sidePolePicture = safetyRating.SidePolePicture;
+                    const frontCrashVideo = safetyRating.FrontCrashVideo;
+                    const sideCrashVideo = safetyRating.SideCrashVideo;
+                    const sidePoleVideo = safetyRating.SidePoleVideo;
                     const overallFrontCrashRating = safetyRating.OverallFrontCrashRating;
                     const overallSideCrashRating = safetyRating.OverallSideCrashRating;
                     const rolloverRating = safetyRating.RolloverRating;
@@ -108,7 +113,7 @@ $('#get-safety-ratings').click(getSafetyRatings);
                     const investigationCount = safetyRating.InvestigationCount;
 
 
-                    console.log(year, vehicle_id, overallRating, make, model, vehicleDescription, complaintsCount, vehiclePicture, vehicleVideo);
+                    console.log(year, vehicle_id, overallRating, make, model, vehicleDescription, complaintsCount, vehiclePicture);
                     console.log(overallFrontCrashRating, overallSideCrashRating, rolloverRating, recallsCount, investigationCount);
 
                     // Append our the event card onto page
@@ -118,7 +123,10 @@ $('#get-safety-ratings').click(getSafetyRatings);
                         '   <div class="card mb-3 mx-0">\n' +
                         '           <div class="row g-0">\n' +
                         '                    <div class="col-sm-4 align-self-center">\n' +
-                        `                        <img class="card-img rounded p-1" src="${vehiclePicture}"  alt="event-image">\n` +
+                        `                        <img class="card-img rounded p-1" src="${vehiclePicture}"  alt="No Image">\n` +
+                        `                        <img class="card-img rounded p-1" src="${frontCrashPicture}"  alt="No Image">\n` +
+                        `                        <img class="card-img rounded p-1" src="${sideCrashPicture}"  alt="No Image">\n` +
+                        `                        <img class="card-img rounded p-1" src="${sidePolePicture}"  alt="No Image">\n` +
                         '                    </div>\n' +
                         '                    <div class="col-sm-8">\n' +
                                     '           <div class="row g-0">\n' +
@@ -127,7 +135,9 @@ $('#get-safety-ratings').click(getSafetyRatings);
                                 `                            <h5 class="card-title fs-4">${make}: ${model}</h5>\n` +
                                 `                            <p class="card-text text-secondary fs-4">${vehicleDescription}</p>\n` +
                                 `                            <p class="card-text text-secondary">Complaints Count: ${complaintsCount}</p>\n` +
-                                `                            <a href="${vehicleVideo}"><button class="btn btn-primary">Vehicle Video</button></a>\n` +
+                                `                            <a href="${frontCrashVideo}"><button class="btn btn-primary">Front Crash Video</button></a>\n` +
+                                `                            <a href="${sideCrashVideo}"><button class="btn btn-primary">Side Crash Video</button></a>\n` +
+                                `                            <a href="${sidePoleVideo}"><button class="btn btn-primary">Side Pole Crash Video</button></a>\n` +
                                 '                        </div>\n' +
                                 '                    </div>\n' +
                                     '                <div class="col-6">\n' +
