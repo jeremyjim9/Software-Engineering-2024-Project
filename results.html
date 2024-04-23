@@ -75,43 +75,18 @@
       <hr>
     </div>
     <div class="container-flex  p-4">
-      <div class="card shadow ">
-        <div class="card-body text-center p-5 m-5">
-          <input class="form-control form-control-sm " type="text"
-            placeholder="Make" aria-label="Make" id="make-input">
-          <input class="form-control form-control-sm" type="text"
-            placeholder="Model" aria-label="Model" id="model-input">
-          <input class="form-control form-control-sm" type="text"
-            placeholder="Year" aria-label="Year" id="year-input">
+        <div class="container-flex  p-4 card shadow m-4" id="shadow-box">
           <!--
-          <div class="dropdown p-3">
-            <button class="btn btn-sm border dropdown-toggle" type="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Year
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">2020</a></li>
-              <li><a class="dropdown-item" href="#">2021</a></li>
-              <li><a class="dropdown-item" href="#">2022</a></li>
-              <li><a class="dropdown-item" href="#">2023</a></li>
-            </ul>
+          <di id="amount-of-results">
           </div>
           -->
-          
-          <a class="btn py-3" id="get-safety-ratings">Search</a>
-          <div id="alertPlaceholder"></div>
-        </div>
+          <div id="safety-rating-container">
+          </div>
+    
       </div>
     </div>
     
-    <div class="container-flex  p-4 card shadow m-4" id="shadow-box">
-        <!--
-        <div id="amount-of-results">
-        </div>
-        -->
-        <div id="safety-rating-container">
-        </div>
-    </div>
+
     
     
     </div>
@@ -121,6 +96,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="js/safetySearch.js"></script>
+    <script src="results.js"></script>
+    
   </body>
 </html>
