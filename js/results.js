@@ -37,10 +37,10 @@ $(document).ready(function() {
                     '   <div class="card mb-3 mx-0">\n' +
                     '           <div class="row g-0">\n' +
                     '                    <div class="col-sm-4 align-self-center">\n' +
-                    `                        <img class="card-img rounded p-1" src="${vehiclePicture}"  alt="No Image">\n` +
-                    `                        <img class="card-img rounded p-1" src="${frontCrashPicture}"  alt="No Image">\n` +
-                    `                        <img class="card-img rounded p-1" src="${sideCrashPicture}"  alt="No Image">\n` +
-                    `                        <img class="card-img rounded p-1" src="${sidePolePicture}"  alt="No Image">\n` +
+                    `                        <img class="card-img rounded p-1" src="${vehiclePicture}"  alt="">\n` +
+                    `                        <img class="card-img rounded p-1" src="${frontCrashPicture}"  alt="">\n` +
+                    `                        <img class="card-img rounded p-1" src="${sideCrashPicture}"  alt="">\n` +
+                    `                        <img class="card-img rounded p-1" src="${sidePolePicture}"  alt="">\n` +
                     '                    </div>\n' +
                     '                    <div class="col-sm-8">\n' +
                                 '           <div class="row g-0">\n' +
