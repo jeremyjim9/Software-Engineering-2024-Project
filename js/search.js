@@ -1,3 +1,8 @@
+if (sessionStorage.getItem('Authed') == "false") {
+    window.location.href = 'register.html';
+}
+    
+
 $('#search').click(getSafetyRatings);
 
     function getSafetyRatings() {

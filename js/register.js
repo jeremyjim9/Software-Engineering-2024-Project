@@ -3,6 +3,7 @@ document.body.style.paddingTop = '8%'
 $('#customerbutton').click(customerRegchange);
 $('#representativebutton').click(representativeRegchange);
 $('#register').click(getRegisterInfo);
+sessionStorage.setItem('Authed',"false");
 
     function getRegisterInfo() {
         const username = $('#username').val();
@@ -26,6 +27,7 @@ $('#register').click(getRegisterInfo);
                     sessionStorage.setItem('Username',username);
                     sessionStorage.setItem('Password',password);
                     sessionStorage.setItem('UserType',userType);
+                    sessionStorage.setItem('Authed',"true");
                     window.location.href = 'search.html';
                 } else {
                     console.log("failure")
@@ -42,7 +44,7 @@ function customerRegchange(){
     $('#register1').hide();
     $('#register2').show();
     document.body.style.paddingTop = '1%'
-    sessionStorage.setItem('UserType','Customer')
+    sessionStorage.setItem('UserType',"Customer")
     console.log(sessionStorage.getItem('UserType'))
 }
 
