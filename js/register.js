@@ -4,6 +4,9 @@ $('#customerbutton').click(customerRegchange);
 $('#representativebutton').click(representativeRegchange);
 $('#register').click(getRegisterInfo);
 sessionStorage.setItem('Authed',"false");
+sessionStorage.setItem('Username',"");
+sessionStorage.setItem('Password',"");
+sessionStorage.setItem('UserType',"");
 
     function getRegisterInfo() {
         const username = $('#username').val();
