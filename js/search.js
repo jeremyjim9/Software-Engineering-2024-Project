@@ -28,7 +28,7 @@ function signout(){
     sessionStorage.setItem('Username',"");
     sessionStorage.setItem('Password',"");
     sessionStorage.setItem('UserType',"");
-    window.location.href = 'search.html';
+    window.location.href = 'register.html';
 
 }
 
