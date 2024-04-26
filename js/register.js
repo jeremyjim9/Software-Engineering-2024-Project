@@ -4,11 +4,17 @@ $('#passwordError').hide();
 $('#customerbutton').click(customerRegchange);
 $('#representativebutton').click(representativeRegchange);
 $('#register').click(getRegisterInfo);
-sessionStorage.setItem('Authed',"false");
-sessionStorage.setItem('Username',"");
-sessionStorage.setItem('Password',"");
-sessionStorage.setItem('UserType',"");
 
+
+if (sessionStorage.getItem('Authed') == "true") {
+    window.location.href = 'search.html';
+}
+else{
+    sessionStorage.setItem('Authed',"false");
+    sessionStorage.setItem('Username',"");
+    sessionStorage.setItem('Password',"");
+    sessionStorage.setItem('UserType',"");
+}
 $(document).ready(function(){
     $('body').css('visibility','visible');
 });

@@ -1,14 +1,23 @@
 $('#usernameError').hide();
 $('#passwordError').hide();
 $('#login').click(getLoginInfo);
-sessionStorage.setItem('Authed',"false");
-sessionStorage.setItem('Username',"");
-sessionStorage.setItem('Password',"");
-sessionStorage.setItem('UserType',"");
+
+if (sessionStorage.getItem('Authed') == "true") {
+    window.location.href = 'search.html';
+}
+else{
+    sessionStorage.setItem('Authed',"false");
+    sessionStorage.setItem('Username',"");
+    sessionStorage.setItem('Password',"");
+    sessionStorage.setItem('UserType',"");
+}
+
 
 $(document).ready(function(){
     $('body').css('visibility','visible');
 });
+
+
 
 function usernameCheck(){
     let username = $('#username').val();
