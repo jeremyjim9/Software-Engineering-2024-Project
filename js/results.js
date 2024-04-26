@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $('body').css('visibility','visible');
+});
 if (sessionStorage.getItem('Authed') == "false") {
     window.location.href = 'register.html';
 }
