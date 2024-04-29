@@ -236,9 +236,10 @@ $(document).ready(function () {
           let x = 0;
           while (x < videos.length) {
             if (x === 0 && (photos === null || photos.length === 0)) {
-              safetyRatingHtml += `<div class="carousel-item active">
+              safetyRatingHtml += `<div class="carousel-item">
                     <div class="container" id="cardImage">
-                        <video width="100%" height="100%" controls>
+                        <video width="100%" height="100%" active controls>
+                        <source src="${videos[x]}" type="video/x-ms-wmv">
                         <source src="${videos[x]}" type="video/mp4">
                         <source src="${videos[x]}" type="video/ogg">
                         Your browser does not support the video tag.
@@ -249,6 +250,7 @@ $(document).ready(function () {
               safetyRatingHtml += `<div class="carousel-item">
                     <div class="container" id="cardImage">
                     <video width="100%" height="100%" controls>
+                    <source src="${videos[x]}" type="video/x-ms-wmv">
                     <source src="${videos[x]}" type="video/mp4">
                     <source src="${videos[x]}" type="video/ogg">
                     Your browser does not support the video tag.
