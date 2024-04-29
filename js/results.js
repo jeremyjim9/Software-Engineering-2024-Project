@@ -111,6 +111,7 @@ $(document).ready(function () {
                       >
                     </div></div>`;
             }
+            /*
             else {
               safetyRatingHtml += `<div class="carousel-item">
                     <div class="container" id="cardImage">
@@ -123,6 +124,7 @@ $(document).ready(function () {
                     </div>
                   </div>`;
             }
+            */
             x++;
           }
           safetyRatingHtml += `
