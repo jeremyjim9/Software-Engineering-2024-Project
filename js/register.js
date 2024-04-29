@@ -105,6 +105,7 @@ function passwordCheck(){
 function customerRegchange(){
     $('#register1').hide();
     $('#register2').show();
+    document.body.style.paddingTop = '1%';
     sessionStorage.setItem('UserType',"Customer")
     console.log(sessionStorage.getItem('UserType'))
 }
@@ -112,6 +113,7 @@ function customerRegchange(){
 function representativeRegchange(){
     $('#register1').hide();
     $('#register2').show();
+    document.body.style.paddingTop = '1%';
     sessionStorage.setItem('UserType','Representative')
     console.log(sessionStorage.getItem('UserType'))
 }

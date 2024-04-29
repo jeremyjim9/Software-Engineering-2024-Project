@@ -9,13 +9,15 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
         body {
-            background-color: #f7f7f7;
+            background-color: white;
             margin: 0%;
             padding: 0%;
             visibility: hidden;
@@ -26,12 +28,12 @@
             padding-left: 10%;
             padding-bottom: 0%;
             margin: 0%;
-            width:75px;
-            height: 75px;
+            width:90px;
+            height: 90px;
         }
         .navbar{
             background-color: white;
-            border-bottom: solid 2px RGB(130, 43, 47,0.1);
+            border-bottom: solid 7px #B6d3E9;
         }
         .nav-link{
             color: #3a5a78;
@@ -42,6 +44,7 @@
         .nav-link:hover{
             color: #f7941f;
         }
+        
         #search{
           border: 1px solid rgb(218, 218, 218);
           background-color: #118456 !important;
@@ -59,19 +62,84 @@
         .form-control{
           height:30px;
         }
-        .row{
+        #navbarNav{
           padding-top: 3%;
           padding-left: 3%;
         }
         #buffer{
           height: 95px;
         }
+        #resultsCard{
+          border: 2px solid #b6d3e9;
+          color: rgb(58, 90, 120);
+        }
+        #resultsCardHeader{
+          background-color:#eaf2f8;
+          border: none;
+          color:#3a5a78;
+          font-weight: bold;
+          font: 18px;
+          text-align: center;
+        }
+        .checked {
+          color: orange;
+        }
+        #cardImage{
+          width:100%;
+        }
+        video{
+          width:100%;
+        }
+        .ratings{
+          color: black;
+        }
+        img{
+          width:100%;
+          max-width:365px;
+        }
+        #header{
+          background-color: white;
+          max-width: 1440px;
+        }
+        #logRegNav{
+          font-weight: bold;
+          height: 40px;
+        }
+        #greeting{
+          background-color: #e4eff6;
+          color:#3a5a78;
+          font-size: small;
+          height: 40px;
+        }
+        #logout{
+          background-color: #3a5a78;
+          color:white;
+          height: 40px;
+        }
+        #logout:hover{
+          background-color: #4f7396;
+        }
     </style>
   </head>
   <body>
-    <div id="header" class="container-fluid">
-      <nav class="navbar  fixed-top navbar-expand-sm">
-        
+    <div class="container-fluid  px-5" id="header">
+    <div class="container-flex">
+      <div class="container p-0">
+        <div class="row justify-content-end  text-center w-100 d-none d-md-flex" id="logRegNav">
+          <div class="col-2 p-2 my-auto " id="greeting">
+            <span>Hello, <span id="username"></span>!</span>
+            </div>
+            <div class="col-2 p-2 my-auto " id="greeting">
+              <span id="cusRep"></span>
+              </div>
+          <div class="col-2 p-2 my-auto" id="logout">
+            <span>Log Out</span>
+            </div>
+
+        </div>
+      </div>
+      <nav class="navbar  navbar-expand-sm">
+
         <a class="navbar-brand" href="search.html">
           <img src="https://s0.hfdstatic.com/higux/dist/images/logo.svg"
             id="logo" alt="The Hartford Logo">
@@ -81,57 +149,66 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse row"  id="navbarNav">
+        
+        <div class="collapse navbar-collapse row" id="navbarNav">
           <ul class="navbar-nav">
 
-              <div class="col-sm-6 col-7 m-sm-1 mx-auto mb-1 mt-2">
-                <li class="nav-item px-1">
+            <div class="col-sm-6 col-7 m-sm-1 mx-auto mb-1 mt-2">
+              <li class="nav-item px-1">
 
-                  <input class="form-control form-control-sm " id="make"
-                    type="text"
-                    placeholder="Make" aria-label="Make">
+                <input class="form-control form-control-sm " id="make"
+                  type="text"
+                  placeholder="Make" aria-label="Make">
 
-                </li>
-              </div>
-              <div class="col-sm-2 col-7 m-sm-1 mx-auto my-1">
-                <li class="nav-item px-1">
+              </li>
+            </div>
+            <div class="col-sm-2 col-7 m-sm-1 mx-auto my-1">
+              <li class="nav-item px-1">
 
-                  <input class="form-control form-control-sm" id="model"
-                    type="text"
-                    placeholder="Model" aria-label="Model">
+                <input class="form-control form-control-sm" id="model"
+                  type="text"
+                  placeholder="Model" aria-label="Model">
 
-                </li>
-              </div>
-              <div class="col-sm-2 col-7 m-sm-1 mx-auto my-1" >
-                <li class="nav-item px-1">
+              </li>
+            </div>
+            <div class="col-sm-2 col-7 m-sm-1 mx-auto my-1">
+              <li class="nav-item px-1">
 
-                  <input class="form-control form-control-sm" id="year"
-                    type="text"
-                    placeholder="Year" aria-label="Year">
+                <input class="form-control form-control-sm" id="year"
+                  type="text"
+                  placeholder="Year" aria-label="Year">
 
-                </li>
-              </div>
-              <div class="col-sm-2 col-7 my-sm-1 mx-auto my-2">
-                <li class="nav-item justify-content-center d-sm-block d-flex">
-
-                  <a id="search" class="btn" id="search">Search</a>
-
-                </li>
+              </li>
+            </div>
+            <div class="col-sm-2 col-7 my-sm-1 mx-auto my-2">
+              <li class="nav-item justify-content-center d-sm-block d-flex">
+                <a id="search" class="btn w-75" id="search">Search</a>
+              </li>
             </ul>
-          </div>
-        </nav>
-        <span class="border border-2"></span>
-      </div>
-      <div class="container-flex" id="buffer"></div>
-      <div class="container-flex ">
-        <div class="container-flex  p-4 card shadow mx-5 " id="shadow-box">
+          </div><hr>
+        </nav></div>
+      
+      <div class="container-flex pt-3">
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="images/logo.svg"  width="25px" height="25px" class="rounded me-2 m-0 p-0 w-25" alt="the Hartford Logo">
+      <strong class="me-auto ">NHTSA Safety Ratings Search</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <span class="fw-bold" id="resultsAmt"></span> results were found!
+    </div>
+  </div>
+</div>
           <!--
           <di id="amount-of-results">
           </div>
           -->
           <div id="safety-rating-container">
+
           </div>
-        </div>
+        
       </div>
     </div>
 
